@@ -2,13 +2,13 @@ $schema: 1.0
 name: CustomConfigwithChocco
 image: microsoftwindowsdesktop_windows-ent-cpc_win11-24H2-ent-cpc
 tasks:
-  - name: ~/choco
+  - name: choco
     parameters:
       package: python3
       version: 3.11.0
-  - name: ~/choco
+  - name: choco
     parameters:
       package: vscode
-  - name: ~/choco
+  - name: choco
     parameters:
       package: nodejs
