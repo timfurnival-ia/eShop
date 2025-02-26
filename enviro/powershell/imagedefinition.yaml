@@ -1,1 +1,51 @@
+$schema: "1.0"
+name: devbox-customization
+tasks:
+  - name: choco
+    parameters:
+      package: python3
+      version: 3.11.0
+  - name: choco
+    parameters:
+      package: vscode
+  - name: choco
+    parameters:
+      package: nodejs
+  - name: choco
+    parameters:
+      package: notepadplusplus
+  - name: choco
+    parameters:
+      package: git
+  - name: choco
+    parameters:
+      package: microsoftazurestorageexplorer
+  - name: choco
+    parameters:
+      package: azure-cli
 
+  - name: powershell
+    parameters:
+      command: |
+        python.exe -m pip install --upgrade pip;
+        pip install numpy pandas requests mlflow poetry 
+        #azureml-sdk databricks-cli scikit-learn torch tensorflow pyspark dask
+
+  - name: powershell
+    parameters:
+      command: |
+        # Install robot framework
+        python.exe -m pip install --upgrade pip;
+        pip install robotframework
+
+  - name: git-clone
+    description: Clone this repository into C:\vscode-ext
+    parameters:
+      repositoryUrl: https://github.com/timfurnival-ia/vscodeext
+      directory: C:\vscode
+
+  - name: powershell
+    description: run script
+    parameters:
+      command: "./installext.ps1"
+      workingDirectory: C:\vscode\vscode-ext
