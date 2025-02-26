@@ -43,9 +43,3 @@ tasks:
     parameters:
       repositoryUrl: https://github.com/timfurnival-ia/vscodeext
       directory: C:\vscode
-
-  - name: powershell
-    description: run script
-    parameters:
-      command: "./installext.ps1"
-      workingDirectory: C:\vscode\vscode-ext
